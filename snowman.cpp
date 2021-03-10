@@ -27,19 +27,20 @@ namespace ariel {
         }
         return true;
     }
+
     string snowman(int num){
-    if(num == 11114411){
-        return("_===_\n(.,.)\n( : )\n( : )");
-    }
-    if(num == 33232124){
-        return ("_\n/_\\n\ (o_O)\n(] [)>\n(   )");
-    }
-    if( corInput(num)==false){
-        string error = "Invaild code '"+std::to_string(num)+"'";
-        throw std::invalid_argumant(error);
+        if(num == 11114411){
+            return("_===_\n(.,.)\n( : )\n( : )\n");
+        }
+        if(num == 33232124){
+            return ("   _. \n/_\\ \n\\(o_O)\n(] [)>\n(   )\n");
+        }
+        if(corInput(num)==false){
+            string error = "Invaild code '"+std::to_string(num)+"'";
+            throw std::invalid_argumant(error);
+        }
         return"";
     }
-}
 }
 
 

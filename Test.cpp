@@ -3,10 +3,11 @@
 using namespace ariel;
 
 #include <string>
+#include <algorithm>
 using namespace std;
 
 
-nospaces(string input){
+string nospaces(string input){
     input.erase(remove(input.begin(), input.end(), ' '), input.end());
     input.erase(remove(input.begin(), input.end(), '\t'), input.end());
     input.erase(remove(input.begin(), input.end(), '\n'), input.end());
@@ -16,10 +17,10 @@ nospaces(string input){
 
 TEST_CASE("Good snowman code") {
     CHECK(snowman(11114411) == string("_===_\n(.,.)\n( : )\n( : )"));
-    CHECK(snowman(33232124) == string("_\n/_\\n\ (o_O)\n(] [)>\n(   )"));
+    CHECK(snowman(33232124) == string("_\n/_\\n\\ (o_O)\n(] [)>\n(   )"));
     CHECK(snowman(22222222) == string(" ___ \n\\(o.o)/\n(] [)\n(" ")"));
     CHECK(snowman(33333333) == string("  _ /_\\nO_O\n/< >\\n___"));
-    CHECK(snowman(11114411) == string("_\n/_\\n\ (o_O)\n(] [)>\n(   )"));
+    CHECK(snowman(11114411) == string("_\n/_\\n\\(o_O)\n(] [)>\n(   )"));
     CHECK(snowman(11114411) == string("_===_\n(.,.)\n( : )\n( : )"));
     CHECK(snowman(11114411) == string("_===_\n(.,.)\n( : )\n( : )"));
     CHECK(snowman(11114411) == string("_===_\n(.,.)\n( : )\n( : )"));
