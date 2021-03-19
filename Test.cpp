@@ -8,18 +8,18 @@ using namespace std;
 
 
 string nospaces(string input){
-    input.erase(remove(input.begin(), input.end(), ' '), input.end());
-    input.erase(remove(input.begin(), input.end(), '\t'), input.end());
-    input.erase(remove(input.begin(), input.end(), '\n'), input.end());
-    input.erase(remove(input.begin(), input.end(), '\r'), input.end());
+    input.erase(remove(input.begin(),input.end(),' '), input.end());
+    input.erase(remove(input.begin(),input.end(),'\t'), input.end());
+    input.erase(remove(input.begin(),input.end(),'\n'), input.end());
+    input.erase(remove(input.begin(),input.end(),'\r'), input.end());
     return input;
 }
 
 TEST_CASE("Good snowman code") {
-    CHECK(nospaces(snowman(11114411)) == nospaces("_===_\n(.,.)\n( : )\n( : )"));
-    CHECK(nospaces(snowman(33232124)) == nospaces("_\n/_\\n\\ (o_O)\n(] [)>\n(   )"));
-    CHECK(nospaces(snowman(22222222)) == nospaces(" ___ \n\\(o.o)/\n(] [)\n(" ")"));
-    CHECK(nospaces(snowman(33333333)) == nospaces("  _ /_\\nO_O\n/< >\\n___"));
+    CHECK(nospaces(snowman(11114411)) == nospaces(" _===_ \n(.,.)\n( : )\n( : )"));
+    CHECK(nospaces(snowman(33232124)) == nospaces("   _ \n  /_\\n\\(o_O)\n (] [)>\n(   )"));
+    CHECK(nospaces(snowman(22222222)) == nospaces("  ___ \n\\(o.o)/\n (] [) \n (" ")"));
+    CHECK(nospaces(snowman(33333333)) == nospaces("  _ /_\\n(O_O)\n/< >\\n___"));
     CHECK(nospaces(snowman(11114411)) == nospaces("_\n/_\\n\\(o_O)\n(] [)>\n(   )"));
     CHECK(nospaces(snowman(11114411)) == nospaces("_===_\n(.,.)\n( : )\n( : )"));
     CHECK(nospaces(snowman(11114411)) == nospaces("_===_\n(.,.)\n( : )\n( : )"));
