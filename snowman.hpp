@@ -14,6 +14,6 @@ const int FIRST_OPTION = 1, SECOND_OPTION = 2, THIRD_OPTION = 3,
     FOURTH_OPTION = 4;
 
 namespace ariel {
-    bool corInput(int x);
+
     std::string snowman(int num);
 }
